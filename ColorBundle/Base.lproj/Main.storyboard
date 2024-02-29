@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7e3-vJ-vfD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color-->
+        <scene sceneID="q2V-90-tSd">
+            <objects>
+                <viewController id="mDn-by-m3Z" customClass="ColorsTableVCViewController" customModule="ColorBundle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bwo-mA-ORa" colorLabel="IBBuiltInLabel-Gray">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aR-8G-hVN">
+                                <rect key="frame" x="107" y="367" width="178" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tempbuttontapped:" destination="mDn-by-m3Z" eventType="touchUpInside" id="ubL-rO-s1g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BmN-KJ-kaa"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                    </view>
+                    <navigationItem key="navigationItem" title="Color" id="9kD-Ex-f1e">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="e6M-SN-q7o"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ipu-MO-cpw" kind="show" identifier="ToColrsDetailVC" id="XiX-xb-mtw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ra-2f-xjo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.46564885496184" y="-31.690140845070424"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gJa-od-WoA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7e3-vJ-vfD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1fA-rs-3rh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mDn-by-m3Z" kind="relationship" relationship="rootViewController" id="oQb-5f-kaq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhx-jt-TQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257.25190839694653" y="-31.690140845070424"/>
+        </scene>
+        <!--Colors DetailVC-->
+        <scene sceneID="dS9-a4-yT6">
+            <objects>
+                <viewController id="ipu-MO-cpw" customClass="ColorsDetailVC" customModule="ColorBundle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbx-q4-Cdb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CyR-I1-Oy8"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="blj-pG-lkz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNt-Kx-gzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="-708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
